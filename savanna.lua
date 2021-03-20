@@ -24,6 +24,7 @@ local TextLabel = Instance.new("TextLabel")
 
 SupremeSavanna.Name = "SupremeSavanna"
 SupremeSavanna.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+SupremeSavanna.ResetOnSpawn = false
 
 LocalFrame.Name = "LocalFrame"
 LocalFrame.Parent = SupremeSavanna
@@ -249,7 +250,7 @@ TextLabel.TextWrapped = true
 
 -- Scripts:
 
-local function JJLH_fake_script() -- SupremeSavanna.LocalHandler 
+local function YNFPZ_fake_script() -- SupremeSavanna.LocalHandler 
 	local script = Instance.new('LocalScript', SupremeSavanna)
 
 	script.Parent.LocalFrame.GodButton.MouseButton1Click:Connect(function()
@@ -304,8 +305,8 @@ local function JJLH_fake_script() -- SupremeSavanna.LocalHandler
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-204.779205, 22.5457935, 65.9662704))
 	end)
 end
-coroutine.wrap(JJLH_fake_script)()
-local function BGQDWGM_fake_script() -- SupremeSavanna.GuiHandler 
+coroutine.wrap(YNFPZ_fake_script)()
+local function MRSJ_fake_script() -- SupremeSavanna.GuiHandler 
 	local script = Instance.new('LocalScript', SupremeSavanna)
 
 	script.Parent.LocalFrame.Active = true
@@ -313,4 +314,4 @@ local function BGQDWGM_fake_script() -- SupremeSavanna.GuiHandler
 	
 	script.Parent.LocalFrame.TextLabel.Active = true
 end
-coroutine.wrap(BGQDWGM_fake_script)()
+coroutine.wrap(MRSJ_fake_script)()
