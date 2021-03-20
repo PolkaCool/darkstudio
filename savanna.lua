@@ -1,3 +1,6 @@
+-- Gui to Lua
+-- Version: 3.2
+
 -- Instances:
 
 local SupremeSavanna = Instance.new("ScreenGui")
@@ -19,6 +22,8 @@ local Mountain1 = Instance.new("TextButton")
 local Mountain2 = Instance.new("TextButton")
 local TeleportsLabel = Instance.new("TextLabel")
 local TextLabel = Instance.new("TextLabel")
+local UsernameLabel = Instance.new("TextLabel")
+local IdLabel = Instance.new("TextLabel")
 
 --Properties:
 
@@ -173,8 +178,8 @@ TeleportsFrame.Parent = LocalFrame
 TeleportsFrame.Active = true
 TeleportsFrame.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
 TeleportsFrame.BorderSizePixel = 0
-TeleportsFrame.Position = UDim2.new(1, 0, 0.269841284, 0)
-TeleportsFrame.Size = UDim2.new(0, 143, 0, 184)
+TeleportsFrame.Position = UDim2.new(1, 0, 0.198412701, 0)
+TeleportsFrame.Size = UDim2.new(0, 143, 0, 202)
 TeleportsFrame.Visible = false
 TeleportsFrame.CanvasSize = UDim2.new(0, 0, 3, 0)
 
@@ -227,7 +232,7 @@ TeleportsLabel.Name = "TeleportsLabel"
 TeleportsLabel.Parent = LocalFrame
 TeleportsLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
 TeleportsLabel.BorderSizePixel = 0
-TeleportsLabel.Position = UDim2.new(1, 0, 0.0714285746, 0)
+TeleportsLabel.Position = UDim2.new(1, 0, -0.00055561366, 0)
 TeleportsLabel.Size = UDim2.new(0, 143, 0, 50)
 TeleportsLabel.Visible = false
 TeleportsLabel.Font = Enum.Font.GothamBlack
@@ -239,7 +244,7 @@ TextLabel.Parent = LocalFrame
 TextLabel.Active = true
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
 TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.000216178174, 0, -0.194999993, 0)
+TextLabel.Position = UDim2.new(0.000216178174, 0, -0.198968306, 0)
 TextLabel.Size = UDim2.new(0, 423, 0, 50)
 TextLabel.ZIndex = 3
 TextLabel.Font = Enum.Font.GothamBlack
@@ -248,9 +253,35 @@ TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 40.000
 TextLabel.TextWrapped = true
 
+UsernameLabel.Name = "UsernameLabel"
+UsernameLabel.Parent = LocalFrame
+UsernameLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UsernameLabel.BackgroundTransparency = 1.000
+UsernameLabel.BorderSizePixel = 0
+UsernameLabel.Position = UDim2.new(0.0212264154, 0, 0.921139956, 0)
+UsernameLabel.Size = UDim2.new(0, 200, 0, 18)
+UsernameLabel.Font = Enum.Font.SourceSans
+UsernameLabel.Text = "Username"
+UsernameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+UsernameLabel.TextSize = 20.000
+UsernameLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+IdLabel.Name = "IdLabel"
+IdLabel.Parent = LocalFrame
+IdLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+IdLabel.BackgroundTransparency = 1.000
+IdLabel.BorderSizePixel = 0
+IdLabel.Position = UDim2.new(0.511792421, 0, 0.925108194, 0)
+IdLabel.Size = UDim2.new(0, 200, 0, 18)
+IdLabel.Font = Enum.Font.SourceSans
+IdLabel.Text = "UserId"
+IdLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+IdLabel.TextSize = 20.000
+IdLabel.TextXAlignment = Enum.TextXAlignment.Right
+
 -- Scripts:
 
-local function YNFPZ_fake_script() -- SupremeSavanna.LocalHandler 
+local function DDDMEF_fake_script() -- SupremeSavanna.LocalHandler 
 	local script = Instance.new('LocalScript', SupremeSavanna)
 
 	script.Parent.LocalFrame.GodButton.MouseButton1Click:Connect(function()
@@ -305,13 +336,16 @@ local function YNFPZ_fake_script() -- SupremeSavanna.LocalHandler
 		game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-204.779205, 22.5457935, 65.9662704))
 	end)
 end
-coroutine.wrap(YNFPZ_fake_script)()
-local function MRSJ_fake_script() -- SupremeSavanna.GuiHandler 
+coroutine.wrap(DDDMEF_fake_script)()
+local function ZZXFCO_fake_script() -- SupremeSavanna.GuiHandler 
 	local script = Instance.new('LocalScript', SupremeSavanna)
 
+	script.Parent.LocalFrame.UsernameLabel.Text = tostring(game.Players.LocalPlayer.Character)
+	script.Parent.LocalFrame.IdLabel.Text = game.Players.LocalPlayer.UserId
+	
 	script.Parent.LocalFrame.Active = true
 	script.Parent.LocalFrame.Draggable = true
 	
 	script.Parent.LocalFrame.TextLabel.Active = true
 end
-coroutine.wrap(MRSJ_fake_script)()
+coroutine.wrap(ZZXFCO_fake_script)()
